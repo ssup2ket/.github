@@ -24,14 +24,14 @@ The following considerations are reflected in ssup2ket services.
 
 * Event-driven architecture - Ssup2ket service uses event-driven architecture for loose coupling and asynchronous processing. [Kafka](https://kafka.apache.org/) is used as the event of ssup2ket services.
 
-* Transaction pattern - 
+* Transaction pattern - ssup2ket services use [saga pattern](https://microservices.io/patterns/data/saga.html) and [outbox pattern](https://microservices.io/patterns/data/transactional-outbox.html) for stable transaction processing.
+
+* API - Ssup2ket services supports HTTP and gRPC as APIs. HTTP API is provided for external clients, and gRPC API is provided for use between ssup2ket services. HTTP is defined through [OpenAPI 3.0](https://www.openapis.org/) and exposed through Swagger.
 
 * Logging - 
 
 * Metric - 
 
-* CI/CD - 
-
-* Interface - 
+* CI/CD - ssup2ket services use CI/CD for stable service distribution. CI (Continuous Integration) is performed through [Github Action](https://github.com/features/actions) and CD (Continuous Deployment) is performed through [ArgoCD](https://argo-cd.readthedocs.io/en/stable/).
 
 * Gracefully shutdown - 
