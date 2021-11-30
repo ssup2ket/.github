@@ -21,11 +21,12 @@ ssup2ket project is composed of the following git repositories.
 The following considerations are reflected in ssup2ket services.
 
 * **Architecture** - Each ssup2ket service follows the [clean architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html). 
+
 * **Service mesh** - ssup2ket services run on service mesh for detailed traffic control and easy monitoring. Service mesh is applied through [Istio](https://istio.io/). Istio uses [OpenTracing](https://opentracing.io/) for easy request tracing between multiple services.
 
 * **Event-driven architecture** - ssup2ket services use event-driven architecture for loose coupling and asynchronous processing. [Kafka](https://kafka.apache.org/) is used as the event of ssup2ket services.
 
-* **Transaction pattern** - ssup2ket services use [saga pattern](https://microservices.io/patterns/data/saga.html) and [outbox pattern](https://microservices.io/patterns/data/transactional-outbox.html) for stable transaction processing.
+* **Transaction pattern** - ssup2ket services use [saga pattern](https://microservices.io/patterns/data/saga.html) and [outbox pattern](https://microservices.io/patterns/data/transactional-outbox.html) for stable transaction processing with [debezium outbox router](https://debezium.io/documentation/reference/1.8/transformations/outbox-event-router.html).
 
 * **API** - ssup2ket services support **HTTP** and **gRPC** as APIs. HTTP API is provided for external clients, and gRPC API is provided for use between ssup2ket services. HTTP is defined through [OpenAPI 3.0](https://www.openapis.org/) and exposed through swagger.
 
