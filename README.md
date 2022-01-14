@@ -4,13 +4,15 @@
 
 ssup2ket project is composed of the following git repositories.
 
-* [Auth service](https://github.com/ssup2ket/ssup2ket-auth-service) - Auth service git repository. Auth service manages user information and is responsible for authentication/authorization of ssup2ket service.
+* [Auth service](https://github.com/ssup2ket/ssup2ket-auth-service) - Auth service git repository. Auth service manages user information and is responsible for authentication/authorization of ssup2ket service. Auth service is developed with **Golang**.
 
-* [Store service](https://github.com/ssup2ket/ssup2ket-store-service) (WIP) - Store service git repostiroy. Ssup2ket Store service manages store and product inventory.
+* [Store service](https://github.com/ssup2ket/ssup2ket-store-service) - Store service git repostiroy. Ssup2ket Store service manages store and product inventory. Store service is developed with **Java on SpringBoot**.
 
 * Order service - Todo
 
 * Payment service - Todo
+
+* Web Service - Todo
 
 * [Service deployment](https://github.com/ssup2ket/ssup2ket-service-deployment) - Service deployment configuration git repository for GitOps.
 
@@ -28,7 +30,7 @@ The following considerations are reflected in ssup2ket services.
 
 * **Transaction pattern** - ssup2ket services use [saga pattern](https://microservices.io/patterns/data/saga.html) and [outbox pattern](https://microservices.io/patterns/data/transactional-outbox.html) for stable transaction processing with [debezium outbox router](https://debezium.io/documentation/reference/1.8/transformations/outbox-event-router.html).
 
-* **API** - ssup2ket services support **HTTP** and **gRPC** as APIs. HTTP API is provided for external clients, and gRPC API is provided for use between ssup2ket services. HTTP is defined through [OpenAPI 3.0](https://www.openapis.org/) and exposed through swagger.
+* **API** - ssup2ket services support **HTTP** and **gRPC** as APIs. HTTP API is provided for external clients, and gRPC API is provided for use between ssup2ket services. HTTP API is exposed through [OpenAPI 3.0](https://www.openapis.org/) and swagger. GRPC API supports reflection to discover services.
 
 * **Healthz endpoint** - ssup2ket services supports the "/healthz" endpoint that can check the operating status of the service. The "/healthz" endpoint is used when configuring the liveness/readiness probe on K8s cluster.
 
