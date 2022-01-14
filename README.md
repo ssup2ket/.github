@@ -2,6 +2,14 @@
 
 **ssup2ket** is an e-ecommerce toy project for personal study. ssup2ket aims to build as an **micro service architecture** based on **K8s** ([Kubernetes](https://kubernetes.io/)). ssup2ket services are deployed, operated, and monitored on K8s cluster. In addition, DB, message queue, cache, proxy, log analyzer/collector, metric collector, and CI/CD tool used by ssup2ket services also operate on K8s cluster.
 
+## Component Stack
+
+ssup2ket project's component stack
+
+![ssup2ket_component_stack](image/ssup2ket_component_stack.PNG)
+
+## GIT Repositories
+
 ssup2ket project is composed of the following git repositories.
 
 * [Auth service](https://github.com/ssup2ket/ssup2ket-auth-service) - Auth service git repository. Auth service manages user information and is responsible for authentication/authorization of ssup2ket service. Auth service is developed with **Golang**.
