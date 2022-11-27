@@ -12,19 +12,19 @@ ssup2ket project's component stack
 
 ssup2ket project is composed of the following git repositories.
 
-* [Service Auth](https://github.com/ssup2ket/service-auth) - Auth service git repository. Auth service manages user information and is responsible for authentication/authorization of ssup2ket service. Auth service is developed with **Golang**.
+* [Service auth](https://github.com/ssup2ket/service-auth) - Auth service git repository. Auth service manages user information and is responsible for authentication/authorization of ssup2ket service. Auth service is developed with **Golang**.
 
-* [Service Store](https://github.com/ssup2ket/service-store) - Store service git repostiroy. Ssup2ket Store service manages store and product inventory. Store service is developed with **Java on SpringBoot**.
+* [Service store](https://github.com/ssup2ket/service-store) - Store service git repostiroy. Ssup2ket Store service manages store and product inventory. Store service is developed with **Java on SpringBoot**.
 
-* Service Order - Todo
+* Service order - Todo
 
-* Service Payment - Todo
+* Service payment - Todo
 
-* Service Web - Todo
+* Service web - Todo
 
-* [Deployments](https://github.com/ssup2ket/deployments) - Service deployment configuration git repository for GitOps.
+* [Deploy services](https://github.com/ssup2ket/deploy-services) - Service deployment configuration git repository for GitOps.
 
-* [Helm Charts](https://github.com/ssup2ket/helm-charts) - Helm charts of DB, message queue, cache, proxy, log analyzer/collector, metric collector, and CI/CD tool used by ssup2ket services.
+* [Helm charts](https://github.com/ssup2ket/helm-charts) - Helm charts of DB, message queue, cache, proxy, log analyzer/collector, metric collector, and CI/CD tool used by ssup2ket services.
 
 ## ssup2ket Service Considerations
 
